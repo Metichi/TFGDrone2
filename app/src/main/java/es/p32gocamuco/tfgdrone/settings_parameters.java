@@ -13,8 +13,9 @@ package es.p32gocamuco.tfgdrone;
 
 public class settings_parameters {
     //Esta clase se utiliza para almacenar en memoria los valores de los ajustes.
-    private float altura;
-    private float velocidad_maxima;
+    private float altura = (float) 20.0;
+    private float velocidad_maxima = (float) 10.0;
     private int LP_comportamiento;
     private int LS_comportamiento;
+    private int CP_comportamiento;
 }
