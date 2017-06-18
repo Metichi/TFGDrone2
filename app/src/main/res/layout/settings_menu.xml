@@ -86,7 +86,33 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/Crit_Power_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Critial_Power_Setting" />
+
+    <RadioGroup
+        android:id="@+id/Crit_Power_RG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation='vertical'>
+
+        <RadioButton
+            android:id="@+id/Land_CP_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Land" />
+
+        <RadioButton
+            android:id="@+id/ReturnHome_CP_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Return_Home" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Low_Signal_Label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Low_Signal_Setting" />
@@ -94,7 +120,7 @@
     <RadioGroup
         android:id="@+id/Low_Signal_RG"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation='vertical'>
 
         <RadioButton
