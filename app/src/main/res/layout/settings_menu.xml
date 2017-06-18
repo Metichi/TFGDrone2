@@ -1,140 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/Speed_Setting_Label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Speed_Setting" />
-
-    <RadioGroup
-        android:id="@+id/speed_RG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation='horizontal'>
-
-        <RadioButton
-            android:id="@+id/H_Speed_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/High_Speed" />
-
-        <RadioButton
-            android:id="@+id/M_Speed_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Medium_Speed" />
-
-        <RadioButton
-            android:id="@+id/L_Speed_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Low_Speed" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/Height_Setting_Label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Height_Setting" />
-
-    <EditText
-        android:id="@+id/Height_Setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/Low_Power_Label"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Low_Power_Setting" />
+        android:layout_height="match_parent">
 
-    <RadioGroup
-        android:id="@+id/Low_Power_RG"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation='vertical'>
-
-        <RadioButton
-            android:id="@+id/Pilot_Control_LP_RB"
+        <Button
+            android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Pilot_Control" />
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/Accept_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
-        <RadioButton
-            android:id="@+id/Land_LP_RB"
+        <Button
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Land" />
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/Cancel_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-        <RadioButton
-            android:id="@+id/ReturnHome_LP_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Return_Home" />
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/button4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-    </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/Crit_Power_Label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Critial_Power_Setting" />
+                <TextView
+                    android:id="@+id/Speed_Setting_Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Speed_Setting" />
 
-    <RadioGroup
-        android:id="@+id/Crit_Power_RG"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation='vertical'>
+                <RadioGroup
+                    android:id="@+id/speed_RG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation='horizontal'>
 
-        <RadioButton
-            android:id="@+id/Land_CP_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Land" />
+                    <RadioButton
+                        android:id="@+id/H_Speed_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/High_Speed" />
 
-        <RadioButton
-            android:id="@+id/ReturnHome_CP_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Return_Home" />
+                    <RadioButton
+                        android:id="@+id/M_Speed_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Medium_Speed" />
 
-    </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/L_Speed_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Low_Speed" />
 
-    <TextView
-        android:id="@+id/Low_Signal_Label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Low_Signal_Setting" />
+                </RadioGroup>
 
-    <RadioGroup
-        android:id="@+id/Low_Signal_RG"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation='vertical'>
+                <TextView
+                    android:id="@+id/Height_Setting_Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Height_Setting" />
 
-        <RadioButton
-            android:id="@+id/Land_LS_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Land" />
+                <EditText
+                    android:id="@+id/Height_Setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
 
-        <RadioButton
-            android:id="@+id/ReturnHome_LS_RB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Return_Home" />
+                <TextView
+                    android:id="@+id/Radius_Setting_Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Radius_Setting" />
 
-    </RadioGroup>
+                <EditText
+                    android:id="@+id/Radius_Setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/Low_Power_Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Low_Power_Setting" />
+
+                <RadioGroup
+                    android:id="@+id/Low_Power_RG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation='vertical'>
+
+                    <RadioButton
+                        android:id="@+id/Pilot_Control_LP_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Pilot_Control" />
+
+                    <RadioButton
+                        android:id="@+id/Land_LP_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Land" />
+
+                    <RadioButton
+                        android:id="@+id/ReturnHome_LP_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Return_Home" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/Crit_Power_Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Critial_Power_Setting" />
+
+                <RadioGroup
+                    android:id="@+id/Crit_Power_RG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation='vertical'>
+
+                    <RadioButton
+                        android:id="@+id/Land_CP_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Land" />
+
+                    <RadioButton
+                        android:id="@+id/ReturnHome_CP_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Return_Home" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/Low_Signal_Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Low_Signal_Setting" />
+
+                <RadioGroup
+                    android:id="@+id/Low_Signal_RG"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation='vertical'>
+
+                    <RadioButton
+                        android:id="@+id/Land_LS_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Land" />
+
+                    <RadioButton
+                        android:id="@+id/ReturnHome_LS_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Return_Home" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+
 
 </LinearLayout>
