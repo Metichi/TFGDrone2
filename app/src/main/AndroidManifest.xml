@@ -7,7 +7,7 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -35,9 +35,13 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".SettingsMenuActivity"
-            android:label="@string/title_activity_settings_menu"
-            android:parentActivityName=".MainActivity"/>
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.p32gocamuco.tfgdrone.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

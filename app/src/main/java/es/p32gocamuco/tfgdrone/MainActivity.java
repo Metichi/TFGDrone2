@@ -47,7 +47,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void settingsMenu(View view){
-        Intent intent = new Intent(this,SettingsMenuActivity.class);
+        Intent intent = new Intent(this,SettingsActivity.class);
         startActivity(intent);
     }
 }
