@@ -42,6 +42,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Location phone_location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
         LatLng phone_latlng = new LatLng(phone_location.getLatitude(),phone_location.getLongitude());
+
         gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(phone_latlng,(float) 17));
         gMap.addMarker(new MarkerOptions().position(phone_latlng).title("Control remoto"));
     }
